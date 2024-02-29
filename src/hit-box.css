@@ -1,0 +1,19 @@
+.hit-box {
+    position: absolute;
+    opacity: 0%;
+    background: rgb(27, 171, 65);
+}
+
+.flowers>.hit-box {
+    width: 25%;
+    height: 55%;
+    top: 25%;
+}
+
+.record > .hit-box {
+    width: 45%;
+    height: 70%;
+    border-radius: 50%;
+    top: 18%;
+    right: 30%;
+}

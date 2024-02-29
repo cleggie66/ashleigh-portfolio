@@ -11,3 +11,258 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.null {
+  pointer-events: none;
+}
+
+.background-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+}
+
+.black-layer {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 0%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.black-layer-active {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 30%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.image-layer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.image-layer>div {
+  position: relative;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-layer>img {
+  position: relative;
+}
+
+.core {
+  position: relative;
+  width: 100%;
+}
+
+.sub {
+  position: absolute;
+  width: 100%;
+}
+
+.outline {
+  position: absolute;
+  opacity: 0%;
+  scale: .8;
+  transition: all .3s ease-in-out;
+  pointer-events: none;
+}
+
+.hit-box:hover ~ .outline {
+  opacity: 100%;
+  scale: .9;
+  transition: all .3s ease-in-out;
+}
+
+.image-layer>div:has(.hit-box:hover) {
+  scale: 1.3;
+  z-index: 10;
+}
+
+.collage-layer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.collage {
+  position: relative;
+  width: 80%;
+}
+
+.title-card-rectangle {
+  width: 35%;
+  z-index: 2;
+  bottom: 32%;
+  right: 9%;
+}
+
+.ornament {
+  width: 27%;
+  z-index: 2;
+  bottom: 24%;
+  right: 22%;
+}
+
+.tickets {
+  width: 27%;
+  z-index: 3;
+  bottom: 8%;
+  right: 8%;
+}
+
+.poloroid {
+  width: 32%;
+  z-index: 2;
+  bottom: 11%;
+  right: 13%;
+}
+
+.sketch-1 {
+  width: 32%;
+  z-index: 2;
+  rotate: -4deg;
+  bottom: 12%;
+  left: 1%;
+}
+
+.qr {
+  width: 27%;
+  z-index: 3;
+  bottom: 10%;
+  left: 13%;
+}
+
+.sketch-2 {
+  width: 36%;
+  z-index: 2;
+  top: 2%;
+  left: 9%;
+  rotate: 170deg;
+}
+
+.title-card-square {
+  width: 40%;
+  z-index: 2;
+  top: 5%;
+  left: 23%;
+}
+
+.umbrella {
+  width: 27%;
+  z-index: 3;
+  bottom: 16%;
+  left: 23%;
+}
+
+.house-of-blues {
+  width: 33%;
+  z-index: 2;
+  bottom: 16%;
+  left: 17%;
+}
+
+.david {
+  width: 26%;
+  z-index: 2;
+  left: 8%;
+  top: 16%;
+  rotate: 10deg;
+}
+
+.plant {
+  width: 40%;
+  z-index: 3;
+  left: 13%;
+  top: 25%;
+}
+
+.coin-1 {
+  width: 24%;
+  z-index: 3;
+  left: 16%;  
+  top: 12%;
+}
+
+.coin-2 {
+  width: 24%;
+  z-index: 3;
+  left: 15%;
+  top: 13%;
+}
+
+.flowers {
+  width: 36%;
+  z-index: 2;
+  rotate: -3deg;
+  left: 20%;
+  top: 23%;
+}
+
+.record {
+  width: 40%;
+  z-index: 3;
+  right: 20%;
+  top: 14%;
+}
+
+.recipe {
+  width: 30%;
+  z-index: 2;
+  right: 9%;
+  top: 10%;
+}
+
+.ku {
+  width: 28%;
+  z-index: 3;
+  right: 6%;
+  top: 28%;
+  rotate: -3deg;
+}
+
+.mayer {
+  width: 45%;
+  z-index: 2;
+  right: 0%;
+  top: 27%;
+  rotate: -3deg;
+}
+
+.cover {
+  width: 48%;
+  z-index: 1;
+  top: 9%;
+  left: 7%;
+}
+
+.paint {
+  width: 52%;
+  z-index: 1;
+  right: 5%;
+  bottom: 16%;
+}

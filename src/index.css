@@ -1,0 +1,127 @@
+@import url("https://use.typekit.net/giz4tyb.css");
+
+
+
+:root {
+  --dark-gray: #454545;
+  --mscale: 10vw;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.outline-hidden {
+  opacity: 0%;
+}
+
+.background-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+}
+
+.black-layer {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0%;
+  z-index: 0;
+  pointer-events: none;
+  transition:
+    z-index 0s linear .5s,
+    opacity .5s linear,
+}
+
+.App:has(div.zoom:hover)>.black-layer {
+  opacity: 75%;
+  z-index: 5;
+  transition: opacity .5s linear;
+}
+
+
+
+.image-layer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+}
+
+.image-layer>div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+      margin-left 1s ease-in-out,
+      margin-right 1s ease-in-out,
+      margin-top 1s ease-in-out,
+      margin-bottom 1s ease-in-out,
+      rotate 1s ease-in-out,
+}
+
+.image-layer>div.offsides {
+  opacity: 0%;
+  transition:
+      margin-left 1s ease-in-out,
+      margin-right 1s ease-in-out,
+      margin-top 1s ease-in-out,
+      margin-bottom 1s ease-in-out,
+      rotate 1s ease-in-out,
+      opacity .3s linear .8s,
+}
+
+.core {
+  position: relative;
+  width: 100%;
+}
+
+.zoom>div:has(.hit-box:hover) {
+  scale: 1.3;
+  z-index: 10;
+}
+
+.outline-behind>div>.outline {
+  z-index: -1;
+}
+
+.collage-layer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.collage {
+  position: relative;
+  width: calc(8 * var(--mscale));
+}
+
+.collage-2 {
+  position: relative;
+  width: calc(9 * var(--mscale));
+}

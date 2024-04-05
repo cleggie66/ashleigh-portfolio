@@ -1,0 +1,110 @@
+.outline {
+    position: absolute;
+    width: 100%;
+    opacity: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outline>img {
+    position: absolute;
+    width: 100%;
+}
+
+.arrow {
+    position: absolute;
+    opacity: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow>img {
+    position: absolute;
+    width: 100%;
+}
+
+.coins>.arrow {
+    width: 12%;
+    left: 32%;
+    top: 20%;
+}
+
+.david>.arrow {
+    width: 8%;
+    left: 35%;
+    bottom: 10%;
+}
+
+.flowers>.arrow {
+    width: 6%;
+    left: 63%;
+    top: 48%;
+}
+
+.house-of-blues>.arrow {
+    width: 6%;
+    left: 10%;
+    top: 30%;
+}
+
+.ku>.arrow {
+    width: 10%;
+    left: 30%;
+    bottom: 30%;
+}
+
+.mayer>.arrow {
+    width: 8%;
+    left: 37%;
+    bottom: 70%;
+}
+
+.ornament>.arrow {
+    width: 15%;
+    left: 52%;
+    top: 35%;
+}
+
+.paint>.arrow {
+    width: 4%;
+    left: 52%;
+    top: 10%;
+}
+
+.poloroid>.arrow {
+    width: 35%;
+    left: 2%;
+    top: 50%;
+}
+
+.qr>.arrow {
+    width: 12%;
+    left: 60%;
+    top: 40%;
+}
+
+.recipe>.arrow {
+    width: 10%;
+    left: 23%;
+    top: 14%;
+}
+
+.record>.arrow {
+    width: 20%;
+    left: 2%;
+    bottom: 40%;
+}
+
+.tickets>.arrow {
+    width: 8%;
+    left: 40%;
+    top: 78%;
+}
+
+.umbrella>.arrow {
+    width: 6%;
+    left: 45%;
+    top: 10%;
+}

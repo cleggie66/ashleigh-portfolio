@@ -1,0 +1,151 @@
+.hit-box {
+    position: absolute;
+    opacity: 0%;
+    background: rgb(27, 171, 65);
+    pointer-events: all; 
+}
+
+.title-card-rectangle>.hit-box {
+    width: 37%;
+    height: 35%;
+    left: 32%;
+    top: 40%
+}
+
+.ornament>.hit-box {
+    width: 25%;
+    height: 35%;
+    border-radius: 50%;
+    left: 35%;
+    top: 50%;
+}
+
+.tickets>.hit-box {
+    width: 20%;
+    height: 20%;
+    top: 44%;
+    left: 38%;
+    rotate: -30deg;
+}
+
+.poloroid>.hit-box {
+    width: 18%;
+    height: 43%;
+    top: 28%;
+    left: 40%;
+}
+
+.sketch-1>.hit-box {
+    width: 20%;
+    height: 38%;
+    top: 33%;
+    left: 36%;
+}
+
+.qr>.hit-box {
+    width: 18%;
+    height: 35%;
+    top: 33%;
+    left: 40%;
+}
+
+.sketch-2>.hit-box {
+    width: 50%;
+    height: 25%;
+    top: 40%;
+    left: 25%;
+    rotate: -5deg;
+}
+
+.title-card-square>.hit-box {
+    width: 20%;
+    height: 32%;
+    left: 40%;
+    top: 30%
+}
+
+.umbrella>.hit-box {
+    width: 25%;
+    height: 35%;
+    border-radius: 50%;
+    left: 38%;
+    top: 32%;
+}
+
+.house-of-blues>.hit-box {
+    width: 80%;
+    height: 15%;
+    left: 10%;
+    top: 42%
+}
+
+.david>.hit-box {
+    width: 22%;
+    height: 40%;
+    top: 30%;
+    left: 37%;
+}
+
+.plant>.hit-box {
+    width: 20%;
+    height: 38%;
+    border-radius: 10%;
+    top: 30%;
+    left: 40%;
+}
+
+.coins>.hit-box {
+    width: 30%;
+    height: 20%;
+    border-radius: 50%;
+    left: 35%;
+    top: 38%;
+}
+
+.flowers>.hit-box {
+    width: 25%;
+    height: 55%;
+    top: 25%;
+}
+
+.record > .hit-box {
+    width: 45%;
+    height: 70%;
+    border-radius: 50%;
+    top: 18%;
+    right: 30%;
+}
+
+.recipe>.hit-box {
+    width: 45%;
+    height: 40%;
+    top: 29%;
+}
+
+.ku>.hit-box {
+    width: 35%;
+    height: 13%;
+    top: 43%;
+    rotate: -3deg;
+}
+
+.mayer>.hit-box {
+    width: 27%;
+    height: 20%;
+    top: 40%;
+    left: 35%;
+}
+
+.cover>.hit-box {
+    width: 65%;
+    height: 70%;
+    top: 18%;
+    left: 14%;
+}
+
+.paint>.hit-box {
+    width: 67%;
+    height: 61%;
+    top: 22%;
+    left: 15%;
+}

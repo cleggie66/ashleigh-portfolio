@@ -1,0 +1,63 @@
+.card7 {
+    width: calc(4.8 * var(--mscale));
+    bottom: calc(1.15 * var(--mscale));
+    right: calc(0.62 * var(--mscale));
+    z-index: 3;
+}
+
+.card6 {
+    width: calc(4.5 * var(--mscale));
+    bottom: calc(1.44 * var(--mscale));
+    left: calc(0.45 * var(--mscale));
+    z-index: 3;
+}
+
+.card9 {
+    width: calc(4.55 * var(--mscale));
+    bottom: calc(1.27 * var(--mscale));
+    left: calc(1.42 * var(--mscale));
+    z-index: 3;
+}
+
+.card2 {
+    width: calc(4.5 * var(--mscale));
+    bottom: calc(0.84 * var(--mscale));
+    left: calc(2.5 * var(--mscale));
+    z-index: 3;
+}
+
+.card8 {
+    width: calc(4.5 * var(--mscale));
+    bottom: calc(0.56 * var(--mscale));
+    right: calc(2.1 * var(--mscale));
+    z-index: 3;
+}
+
+.card16 {
+    width: calc(4 * var(--mscale));
+    top: calc(0.35 * var(--mscale));
+    left: calc(2.52 * var(--mscale));
+    z-index: 3;
+}
+
+.card1 {
+    width: calc(4.5 * var(--mscale));
+    bottom: calc(0.45 * var(--mscale));
+    left: calc(1.1 * var(--mscale));
+    z-index: 3;
+}
+
+.card12 {
+    width: calc(4 * var(--mscale));
+    top: calc(0.95 * var(--mscale));
+    left: calc(0.82 * var(--mscale));
+    z-index: 3;
+}
+
+.card4 {
+    width: calc(4.9 * var(--mscale));
+    top: calc(1.45 * var(--mscale));
+    right: calc(1.85 * var(--mscale));
+    z-index: 3;
+}
+

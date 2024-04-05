@@ -1,0 +1,429 @@
+.offsides>.hit-box {
+    pointer-events: none;
+}
+
+.title-card-text {
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+}
+
+.item-text-box {
+    position: absolute;
+    z-index: 6;
+    overflow: hidden;
+    opacity: 0%;
+}
+
+div:has(.hit-box:hover)>.item-text-box {
+    opacity: 100%;
+}
+
+.item-text-box>h4 {
+    color: #d4fd00;
+    font-size: calc(0.10 * var(--mscale));
+    margin: 0;
+    position: relative;
+    font-family: acumin-pro-wide, sans-serif;
+    font-weight: 500;
+}
+
+div:has(.hit-box:hover)>div.slide-right>h4 {
+    animation: 0.4s slide-right;
+}
+
+div:has(.hit-box:hover)>div.slide-left>h4 {
+    animation: 0.4s slide-left;
+}
+
+.item-text-box>p {
+    color: #ffffff;
+    font-size: calc(0.07 * var(--mscale));
+    line-height: calc(0.10 * var(--mscale));
+    margin: 0;
+    position: relative;
+    font-family: acumin-pro-wide, sans-serif;
+    font-weight: 400;
+}
+
+
+div:has(.hit-box:hover)>div.slide-right>p {
+    animation: .8s slide-right;
+}
+
+div:has(.hit-box:hover)>div.slide-left>p {
+    animation: .8s slide-left;
+}
+
+.title-card-rectangle {
+    width: calc(3.5 * var(--mscale));
+    bottom: calc(1.72 * var(--mscale));
+    right: calc(0.9 * var(--mscale));
+    z-index: 4;
+}
+
+.ornament {
+    width: calc(2.7 * var(--mscale));
+    bottom: calc(1.29 * var(--mscale));
+    right: calc(2.2 * var(--mscale));
+    z-index: 2;
+}
+
+.ornament>.item-text-box {
+    left: calc(1.8 * var(--mscale));
+    top: calc(0.8 * var(--mscale));
+    width: 45%;
+}
+
+.ornament.offsides {
+    margin-bottom: calc(4.5 * var(--mscale));
+}
+
+.tickets {
+    width: calc(2.7 * var(--mscale));
+    bottom: calc(0.43 * var(--mscale));
+    right: calc(0.8 * var(--mscale));
+    z-index: 3;
+}
+
+.tickets>.item-text-box {
+    left: calc(1.4 * var(--mscale));
+    top: calc(1.3 * var(--mscale));
+    width: 45%;
+}
+
+.tickets.offsides {
+    margin-bottom: calc(6 * var(--mscale));
+    margin-right: calc(2 * var(--mscale));
+    rotate: 360deg;
+}
+
+.poloroid {
+    width: calc(3.2 * var(--mscale));
+    bottom: calc(0.59 * var(--mscale));
+    right: calc(1.4 * var(--mscale));
+    z-index: 2;
+}
+
+.poloroid>.item-text-box {
+    right: calc(2.0 * var(--mscale));
+    bottom: calc(1.5 * var(--mscale));
+    width: 50%;
+}
+
+.poloroid.offsides {
+    margin-right: calc(8 * var(--mscale));
+}
+
+.sketch-1 {
+    width: calc(3.2 * var(--mscale));
+    bottom: calc(0.64 * var(--mscale));
+    left: calc(0.1 * var(--mscale));
+    z-index: 2;
+    rotate: -4deg;
+}
+
+.sketch-1>.item-text-box {
+    left: calc(1.9 * var(--mscale));
+    top: calc(1 * var(--mscale));
+    width: 50%;
+    rotate: 4deg;
+}
+
+.sketch-1.offsides {
+    margin-bottom: calc(6 * var(--mscale));
+    margin-left: calc(2 * var(--mscale));
+}
+
+.qr {
+    width: calc(2.7 * var(--mscale));
+    bottom: calc(0.53 * var(--mscale));
+    left: calc(1.3 * var(--mscale));
+    z-index: 3;
+}
+
+.qr>.item-text-box {
+    left: calc(2 * var(--mscale));
+    top: calc(0.5 * var(--mscale));
+    width: 50%;
+}
+
+.qr.offsides {
+    margin-bottom: calc(7 * var(--mscale));
+    margin-left: calc(1 * var(--mscale));
+    rotate: 45deg;
+}
+
+.sketch-2 {
+    width: calc(3.6 * var(--mscale));
+    top: calc(0.1 * var(--mscale));
+    left: calc(0.9 * var(--mscale));
+    z-index: 2;
+    rotate: 170deg;
+}
+
+.sketch-2>.item-text-box {
+    right: calc(2.9 * var(--mscale));
+    bottom: calc(1.2 * var(--mscale));
+    width: 50%;
+    rotate: -170deg;
+}
+
+.sketch-2.offsides {
+    margin-top: calc(7 * var(--mscale));
+    margin-left: calc(7 * var(--mscale));
+    rotate: 360deg;
+}
+
+.title-card-square {
+    width: calc(4.0 * var(--mscale));
+    top: calc(0.26 * var(--mscale));
+    left: calc(2.3 * var(--mscale));
+    z-index: 2;
+}
+
+.title-card-square.offsides {
+    margin-top: calc(3 * var(--mscale));
+    margin-left: calc(7 * var(--mscale));
+    rotate: 90deg;
+}
+
+.umbrella {
+    width: calc(2.7 * var(--mscale));
+    bottom: calc(0.86 * var(--mscale));
+    left: calc(2.3 * var(--mscale));
+    z-index: 3;
+}
+
+.umbrella>.item-text-box {
+    left: calc(1.5 * var(--mscale));
+    bottom: calc(1.4 * var(--mscale));
+    width: 50%;
+}
+
+.umbrella.offsides {
+    margin-bottom: calc(7 * var(--mscale));
+    rotate: 360deg;
+}
+
+.house-of-blues {
+    width: calc(3.3 * var(--mscale));
+    bottom: calc(0.86 * var(--mscale));
+    left: calc(1.7 * var(--mscale));
+    z-index: 2;
+}
+
+.house-of-blues>.item-text-box {
+    left: calc(0.6 * var(--mscale));
+    bottom: calc(1.4 * var(--mscale));
+    width: 50%;
+}
+
+.house-of-blues.offsides {
+    margin-left: calc(9 * var(--mscale));
+}
+
+.david {
+    width: calc(2.6 * var(--mscale));
+    left: calc(0.8 * var(--mscale));
+    top: calc(0.86 * var(--mscale));
+    z-index: 2;
+    rotate: 10deg;
+}
+
+.david>.item-text-box {
+    left: calc(1.3 * var(--mscale));
+    top: calc(1.3 * var(--mscale));
+    width: 50%;
+    rotate: -10deg;
+}
+
+.david.offsides {
+    margin-top: calc(5 * var(--mscale));
+    margin-right: calc(2 * var(--mscale));
+    rotate: -20deg;
+}
+
+.plant {
+    width: calc(4.0 * var(--mscale));
+    left: calc(1.3 * var(--mscale));
+    top: calc(1.34 * var(--mscale));
+    z-index: 3;
+}
+
+.plant>.item-text-box {
+    left: calc(2.3 * var(--mscale));
+    top: calc(1.4 * var(--mscale));
+    width: 50%;
+}
+
+.plant.offsides {
+    margin-top: calc(5 * var(--mscale));
+    margin-left: calc(2 * var(--mscale));
+    rotate: 20deg;
+}
+
+.coins {
+    width: calc(2.4 * var(--mscale));
+    left: calc(1.6 * var(--mscale));
+    top: calc(0.64 * var(--mscale));
+    z-index: 3;
+}
+
+.coins>.item-text-box {
+    left: calc(1.2 * var(--mscale));
+    bottom: calc(1 * var(--mscale));
+    width: 50%;
+}
+
+.coins.offsides {
+    margin-top: calc(5 * var(--mscale));
+    margin-left: calc(8 * var(--mscale));
+    rotate: 400deg;
+}
+
+.flowers {
+    width: calc(3.6 * var(--mscale));
+    left: calc(2 * var(--mscale));
+    top: calc(1.24 * var(--mscale));
+    z-index: 2;
+    rotate: -3deg;
+}
+
+.flowers>.item-text-box {
+    left: calc(2.3 * var(--mscale));
+    top: calc(1.4 * var(--mscale));
+    width: 40%;
+    rotate: 3deg;
+}
+
+.flowers.offsides {
+    margin-top: calc(5 * var(--mscale));
+}
+
+.record {
+    width: calc(4.0 * var(--mscale));
+    right: calc(2 * var(--mscale));
+    top: calc(0.75 * var(--mscale));
+    z-index: 3;
+}
+
+.record>.item-text-box {
+    right: calc(2.8 * var(--mscale));
+    top: calc(2 * var(--mscale));
+    width: 35%;
+}
+
+.record.offsides {
+    margin-right: calc(7 * var(--mscale));
+    margin-top: calc(5 * var(--mscale));
+    rotate: -360deg;
+}
+
+.recipe {
+    width: calc(3.0 * var(--mscale));
+    right: calc(0.9 * var(--mscale));
+    top: calc(0.53 * var(--mscale));
+    z-index: 2;
+}
+
+.recipe>.item-text-box {
+    right: calc(2.4 * var(--mscale));
+    bottom: calc(1.6 * var(--mscale));
+    width: 50%;
+    text-align: end;
+}
+
+.recipe.offsides {
+    margin-right: calc(9 * var(--mscale));
+    margin-bottom: calc(6 * var(--mscale));
+}
+
+.ku {
+    width: calc(2.8 * var(--mscale));
+    right: calc(0.6 * var(--mscale));
+    top: calc(1.51 * var(--mscale));
+    z-index: 3;
+    rotate: -3deg;
+}
+
+.ku>.item-text-box {
+    right: calc(0.6 * var(--mscale));
+    top: calc(1.2 * var(--mscale));
+    width: 35%;
+    rotate: 3deg;
+}
+
+.ku.offsides {
+    margin-right: calc(1 * var(--mscale));
+    margin-top: calc(6 * var(--mscale));
+}
+
+.mayer {
+    width: calc(4.5 * var(--mscale));
+    right: calc(0 * var(--mscale));
+    top: calc(1.45 * var(--mscale));
+    z-index: 2;
+    rotate: -3deg;
+}
+
+.mayer>.item-text-box {
+    right: calc(0.8 * var(--mscale));
+    top: calc(0.6 * var(--mscale));
+    width: 35%;
+    rotate: 3deg;
+}
+
+.mayer.offsides {
+    margin-right: calc(10 * var(--mscale));
+}
+
+.cover {
+    width: calc(4.8 * var(--mscale));
+    top: calc(0.48 * var(--mscale));
+    left: calc(0.7 * var(--mscale));
+    z-index: 1;
+}
+
+.cover.offsides {
+    margin-top: calc(7 * var(--mscale));
+    margin-left: calc(0.7 * var(--mscale));
+}
+
+.paint {
+    width: calc(5.2 * var(--mscale));
+    right: calc(0.5 * var(--mscale));
+    bottom: calc(0.86 * var(--mscale));
+    z-index: 1;
+}
+
+.paint>.item-text-box {
+    left: calc(3.4 * var(--mscale));
+    bottom: calc(2.9 * var(--mscale));
+    width: 45%;
+    scale: 1.3;
+}
+
+.paint.offsides {
+    margin-bottom: calc(7 * var(--mscale));
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}

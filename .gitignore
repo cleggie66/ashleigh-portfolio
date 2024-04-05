@@ -11,6 +11,9 @@
 
 # misc
 /assets
+/media
+*/assets
+*/media
 .DS_Store
 .env.local
 .env.development.local

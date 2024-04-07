@@ -10,8 +10,8 @@ function App() {
 
   return (
     <div className="App">
-      <HomePage />
-      {/* <ProjectList /> */}
+      {/* <HomePage /> */}
+      <ProjectList />
       <div className={`black-layer`}>
         <img src={overlay} alt="0" className="background" />
       </div>

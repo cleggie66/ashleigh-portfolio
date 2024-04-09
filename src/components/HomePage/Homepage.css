@@ -1,4 +1,4 @@
-.offsides>.hit-box {
+.post>.hit-box {
     pointer-events: none;
 }
 
@@ -75,7 +75,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     width: 45%;
 }
 
-.ornament.offsides {
+.ornament.pre,
+.ornament.post {
     margin-bottom: calc(4.5 * var(--mscale));
 }
 
@@ -92,7 +93,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     width: 45%;
 }
 
-.tickets.offsides {
+.tickets.pre,
+.tickets.post {
     margin-bottom: calc(6 * var(--mscale));
     margin-right: calc(2 * var(--mscale));
     rotate: 360deg;
@@ -111,7 +113,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     width: 50%;
 }
 
-.poloroid.offsides {
+.poloroid.pre,
+.poloroid.post {
     margin-right: calc(8 * var(--mscale));
 }
 
@@ -130,7 +133,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     rotate: 4deg;
 }
 
-.sketch-1.offsides {
+.sketch-1.pre,
+.sketch-1.post {
     margin-bottom: calc(6 * var(--mscale));
     margin-left: calc(2 * var(--mscale));
 }
@@ -148,7 +152,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     width: 50%;
 }
 
-.qr.offsides {
+.qr.pre,
+.qr.post {
     margin-bottom: calc(7 * var(--mscale));
     margin-left: calc(1 * var(--mscale));
     rotate: 45deg;
@@ -169,23 +174,11 @@ div:has(.hit-box:hover)>div.slide-left>p {
     rotate: -170deg;
 }
 
-.sketch-2.offsides {
+.sketch-2.pre,
+.sketch-2.post {
     margin-top: calc(7 * var(--mscale));
     margin-left: calc(7 * var(--mscale));
     rotate: 360deg;
-}
-
-.title-card-square {
-    width: calc(4.0 * var(--mscale));
-    top: calc(0.26 * var(--mscale));
-    left: calc(2.3 * var(--mscale));
-    z-index: 2;
-}
-
-.title-card-square.offsides {
-    margin-top: calc(3 * var(--mscale));
-    margin-left: calc(7 * var(--mscale));
-    rotate: 90deg;
 }
 
 .umbrella {
@@ -201,7 +194,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     width: 50%;
 }
 
-.umbrella.offsides {
+.umbrella.pre,
+.umbrella.post {
     margin-bottom: calc(7 * var(--mscale));
     rotate: 360deg;
 }
@@ -219,7 +213,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     width: 50%;
 }
 
-.house-of-blues.offsides {
+.house-of-blues.pre,
+.house-of-blues.post {
     margin-left: calc(9 * var(--mscale));
 }
 
@@ -238,7 +233,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     rotate: -10deg;
 }
 
-.david.offsides {
+.david.pre,
+.david.post {
     margin-top: calc(5 * var(--mscale));
     margin-right: calc(2 * var(--mscale));
     rotate: -20deg;
@@ -257,7 +253,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     width: 50%;
 }
 
-.plant.offsides {
+.plant.pre,
+.plant.post {
     margin-top: calc(5 * var(--mscale));
     margin-left: calc(2 * var(--mscale));
     rotate: 20deg;
@@ -276,7 +273,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     width: 50%;
 }
 
-.coins.offsides {
+.coins.pre,
+.coins.post {
     margin-top: calc(5 * var(--mscale));
     margin-left: calc(8 * var(--mscale));
     rotate: 400deg;
@@ -297,7 +295,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     rotate: 3deg;
 }
 
-.flowers.offsides {
+.flowers.pre,
+.flowers.post {
     margin-top: calc(5 * var(--mscale));
 }
 
@@ -314,7 +313,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     width: 35%;
 }
 
-.record.offsides {
+.record.pre,
+.record.post {
     margin-right: calc(7 * var(--mscale));
     margin-top: calc(5 * var(--mscale));
     rotate: -360deg;
@@ -334,7 +334,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     text-align: end;
 }
 
-.recipe.offsides {
+.recipe.pre,
+.recipe.post {
     margin-right: calc(9 * var(--mscale));
     margin-bottom: calc(6 * var(--mscale));
 }
@@ -354,7 +355,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     rotate: 3deg;
 }
 
-.ku.offsides {
+.ku.pre,
+.ku.post {
     margin-right: calc(1 * var(--mscale));
     margin-top: calc(6 * var(--mscale));
 }
@@ -374,7 +376,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     rotate: 3deg;
 }
 
-.mayer.offsides {
+.mayer.pre,
+.mayer.post {
     margin-right: calc(10 * var(--mscale));
 }
 
@@ -385,7 +388,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     z-index: 1;
 }
 
-.cover.offsides {
+.cover.pre,
+.cover.post {
     margin-top: calc(7 * var(--mscale));
     margin-left: calc(0.7 * var(--mscale));
 }
@@ -404,7 +408,8 @@ div:has(.hit-box:hover)>div.slide-left>p {
     scale: 1.3;
 }
 
-.paint.offsides {
+.paint.pre,
+.paint.post {
     margin-bottom: calc(7 * var(--mscale));
 }
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
+import { setPage, resetPage } from '../../store/pages';
 
 import OutlineGenerator from "../OutlineGenerator";
 
@@ -22,28 +23,14 @@ import record from "../../media/png-exports/record.png";
 import sketch1 from "../../media/png-exports/sketch-1.png";
 import sketch2 from "../../media/png-exports/sketch-2.png";
 import tickets from "../../media/png-exports/tickets.png";
-import titleCardRectangle from "../../media/png-exports/title-card-rectangle.png";
-import titleCardRectangleText from "../../media/png-exports/title-card-rectangle-text.png";
-import titleCardSquare from "../../media/png-exports/title-card-square.png";
-import titleCardSquareText from "../../media/png-exports/title-card-square-text.png";
 
 import umbrella from "../../media/png-exports/umbrella.png";
 import "./Homepage.css";
 
 
 function HomePage() {
-    const pageState = useSelector(state => state.viewing);
-    const dispatch = useDispatch();
-
-    // const changePage = (page) => {
-    //     dispatch(setPage(page));
-
-    //     setTimeout(() => {
-    //         dispatch(resetPage())
-    //     }, 1000);
-    // };
-    const [offsides, setOffsides] = useState("");
-
+    const pageState = useSelector(state => state.pages);
+    const visibility = pageState.home;
 
     const homePageItems = [
         {
@@ -189,25 +176,11 @@ function HomePage() {
 
     return (
         <>
-            <div className="image-layer">
-                <div className="title-card-rectangle">
-                    <img src={titleCardRectangleText} alt="0" className="title-card-text" />
-                    <img src={titleCardRectangle} alt="0" className="core" />
-                    <div onClick={() => setOffsides(offsides === "" ? "offsides" : "")} className="hit-box" />
-                </div>
-            </div>
-            <div className="image-layer">
-                <div className={`title-card-square ${offsides}`}>
-                    <img src={titleCardSquareText} alt="0" className="title-card-text" />
-                    <img src={titleCardSquare} alt="0" className="core" />
-                    <div className="hit-box" />
-                </div>
-            </div>
             {
                 homePageItems.map((item) => {
                     return (
                         <div className={`image-layer ${item.zoom} ${item.outline}`}>
-                            <div className={`${item.name} ${offsides}`}>
+                            <div className={`${item.name} ${visibility}`}>
                                 <div className={`item-text-box ${item.textAnimation}`}>
                                     <h4>{item.title}</h4>
                                     <p>{item.description}</p>

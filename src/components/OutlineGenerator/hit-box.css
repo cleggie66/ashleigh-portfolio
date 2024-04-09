@@ -12,6 +12,13 @@
     top: 40%
 }
 
+.project-card>.hit-box {
+    width: 20%;
+    height: 32%;
+    left: 40%;
+    top: 30%
+}
+
 .ornament>.hit-box {
     width: 25%;
     height: 35%;
@@ -55,13 +62,6 @@
     top: 40%;
     left: 25%;
     rotate: -5deg;
-}
-
-.title-card-square>.hit-box {
-    width: 20%;
-    height: 32%;
-    left: 40%;
-    top: 30%
 }
 
 .umbrella>.hit-box {

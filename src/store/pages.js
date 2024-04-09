@@ -4,7 +4,10 @@ const setActivePage = (pages, page) => {
     for (let i = 0; i < keys.length; i++) {
         let key = keys[i];
         if (newPages[key] === "active") newPages[key] = "post";
-        if (key === page) newPages[key] = "active";
+        if (key === page){
+            newPages["nav"] = page;
+            newPages[key] = "active";
+        }
     }
     return newPages;
 };
@@ -19,8 +22,8 @@ const resetAllPages = (pages) => {
     return newPages;
 };
 
-const SET_ACTIVE = "viewing/SET_ACTIVE";
-const RESET_PAGES = "viewing/RESET_PAGES";
+const SET_ACTIVE = "pages/SET_ACTIVE";
+const RESET_PAGES = "pages/RESET_PAGES";
 
 export const setPage = (page) => {
     return {
@@ -37,11 +40,9 @@ export const resetPage = () => {
 };
 
 const initialState = {
+    nav: "home",
     home: "active",
-    about: "pre",
-    critique: "pre",
-    reachOut: "pre",
-    funSettings: "pre",
+    index: "pre",
 };
 
 export default function reducer(state = initialState, action) {

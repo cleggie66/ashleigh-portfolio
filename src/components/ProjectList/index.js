@@ -27,62 +27,69 @@ function ProjectList() {
     const pageState = useSelector(state => state.pages);
     const visibility = pageState.index;
 
+    const projectCardItems = [
+        {
+            name: "project1",
+            numSrc: num1,
+            cardSrc: card4,
+        },
+        {
+            name: "project2",
+            numSrc: num2,
+            cardSrc: card11,
+        },
+        {
+            name: "project3",
+            numSrc: num3,
+            cardSrc: card12,
+        },
+        {
+            name: "project4",
+            numSrc: num4,
+            cardSrc: card7,
+        },
+        {
+            name: "project5",
+            numSrc: num5,
+            cardSrc: card2,
+        },
+        {
+            name: "project6",
+            numSrc: num6,
+            cardSrc: card16,
+        },
+        {
+            name: "project7",
+            numSrc: num7,
+            cardSrc: card17,
+        },
+        {
+            name: "project8",
+            numSrc: num8,
+            cardSrc: card6,
+        },
+        {
+            name: "project9",
+            numSrc: num9,
+            cardSrc: card3,
+        }
+    ]
+
+
     return (
-        <>
-            <div className="image-layer">
-                <div className={`project1 ${visibility} project-index-card`}>
-                    <img src={num1} alt="0" className="title-card-number" />
-                    <img src={card4} alt="0" className="core" />
-                </div>
-            </div>
-            <div className="image-layer">
-                <div className={`project2 ${visibility} project-index-card`}>
-                    <img src={num2} alt="0" className="title-card-number" />
-                    <img src={card11} alt="0" className="core" />
-                </div>
-            </div>
-            <div className="image-layer">
-                <div className={`project3 ${visibility} project-index-card`}>
-                    <img src={num3} alt="0" className="title-card-number" />
-                    <img src={card12} alt="0" className="core" />
-                </div>
-            </div>
-            <div className="image-layer">
-                <div className={`project4 ${visibility} project-index-card`}>
-                    <img src={num4} alt="0" className="title-card-number" />
-                    <img src={card7} alt="0" className="core" />
-                </div>
-            </div>
-            <div className="image-layer">
-                <div className={`project5 ${visibility} project-index-card`}>
-                    <img src={num5} alt="0" className="title-card-number" />
-                    <img src={card2} alt="0" className="core" />
-                </div>
-            </div>
-            <div className="image-layer">
-                <div className={`project6 ${visibility} project-index-card`}>
-                    <img src={num6} alt="0" className="title-card-number" />
-                    <img src={card16} alt="0" className="core" />
-                </div>
-            </div>
-            <div className="image-layer">
-                <div className={`project7 ${visibility} project-index-card`}>
-                    <img src={num7} alt="0" className="title-card-number" />
-                    <img src={card17} alt="0" className="core" />
-                </div>
-            </div>
-            <div className="image-layer">
-                <div className={`project8 ${visibility} project-index-card`}>
-                    <img src={num8} alt="0" className="title-card-number" />
-                    <img src={card6} alt="0" className="core" />
-                </div>
-            </div>
-            <div className="image-layer">
-                <div className={`project9 ${visibility} project-index-card`}>
-                    <img src={num9} alt="0" className="title-card-number" />
-                    <img src={card3} alt="0" className="core" />
-                </div>
-            </div>
+        <>  
+            {
+                projectCardItems.map((item) => {
+                    return (
+                        <div className="image-layer">
+                            <div className={`${item.name} ${visibility} project-index-card`}>
+                                <img src={item.numSrc} alt="0" className="title-card-number" />
+                                <img src={item.cardSrc} alt="0" className="core" />
+                            </div>
+                        </div>
+                    )
+                })
+            }
         </>
     )
 }

@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="App">
       <div className="image-layer">
-        <div className={`title-card-rectangle`}>
+        <div className={`ashleigh-card ${nav}`}>
           <img src={titleCardRectangleText} alt="0" className="title-card-text" />
           <img src={titleCardRectangle} alt="0" className="core" />
           <div

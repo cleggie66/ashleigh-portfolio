@@ -78,7 +78,16 @@ code {
       margin-top 1s ease-in-out,
       margin-bottom 1s ease-in-out,
       rotate 1s ease-in-out,
-      scale 1s ease-in-out,
+}
+
+.image-layer>div.project-index-card {
+  transition:
+    margin-left 1s ease-in-out,
+    margin-right 1s ease-in-out,
+    margin-top 1s ease-in-out,
+    margin-bottom 1s ease-in-out,
+    rotate 1s ease-in-out,
+    scale 1s ease-in-out,
 }
 
 .image-layer>div.post {
@@ -90,7 +99,6 @@ code {
       margin-bottom 1s ease-in-out,
       rotate 1s ease-in-out,
       opacity .3s linear .8s,
-      scale 1s ease-in-out,
 }
 
 .core {
@@ -146,4 +154,16 @@ code {
   margin-top: calc(3 * var(--mscale));
   margin-left: calc(7 * var(--mscale));
   rotate: 90deg;
+}
+
+.ashleigh-card {
+  width: calc(3.5 * var(--mscale));
+  bottom: calc(1.72 * var(--mscale));
+  right: calc(0.9 * var(--mscale));
+  z-index: 4;
+}
+
+.ashleigh-card.index {
+  margin-bottom: calc(3 * var(--mscale));
+  margin-right: calc(3 * var(--mscale));
 }

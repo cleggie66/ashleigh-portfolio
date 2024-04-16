@@ -55,13 +55,6 @@ div:has(.hit-box:hover)>div.slide-left>p {
     animation: .8s slide-left;
 }
 
-.title-card-rectangle {
-    width: calc(3.5 * var(--mscale));
-    bottom: calc(1.72 * var(--mscale));
-    right: calc(0.9 * var(--mscale));
-    z-index: 4;
-}
-
 .ornament {
     width: calc(2.7 * var(--mscale));
     bottom: calc(1.29 * var(--mscale));

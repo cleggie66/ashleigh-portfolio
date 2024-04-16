@@ -4,7 +4,7 @@
 }
 
 .project-index-card.post {
-    margin-left: calc(10 * var(--mscale));
+    margin-left: calc(8 * var(--mscale));
 }
 
 .title-card-number {

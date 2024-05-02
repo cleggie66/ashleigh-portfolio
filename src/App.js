@@ -3,6 +3,7 @@ import { setPage, resetPage } from './store/pages';
 
 import HomePage from "./components/HomePage";
 import ProjectList from "./components/ProjectList";
+import ProjectPage from "./components/ProjectPage";
 
 import titleCardRectangle from "./media/png-exports/title-card-rectangle.png";
 import titleCardRectangleText from "./media/png-exports/title-card-rectangle-text.png";
@@ -52,8 +53,9 @@ function App() {
           />
         </div>
       </div>
-      <HomePage />
-      <ProjectList />
+      {/* <HomePage />
+      <ProjectList /> */}
+      <ProjectPage />
       <div className={`black-layer`}>
         <img src={overlay} alt="0" className="background" />
       </div>

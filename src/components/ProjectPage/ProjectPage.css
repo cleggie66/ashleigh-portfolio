@@ -1,0 +1,33 @@
+.project-pdf-page {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.project-pdf {
+    position: absolute;
+    border: none;
+    width: calc(6 * var(--mscale));
+}
+
+.project-pdf.center {
+    width: calc(2 * var(--mscale));
+}
+
+.project-pdf-right {
+    position: absolute;
+    border: none;
+    width: calc(6 * var(--mscale));
+}
+
+.project-pdf-page > .fa-caret-right {
+    margin-left: 65%;
+}
+
+.project-pdf-page>.fa-caret-left,
+.project-pdf-page>.fa-caret-right {
+    font-size: 48px;
+}

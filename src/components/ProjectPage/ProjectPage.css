@@ -7,6 +7,19 @@
     width: 100%;
 }
 
+.pdf-page.pre,
+.pdf-page.post {
+    margin-bottom: calc(4.5 * var(--mscale));
+}
+
+.pdf-main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
 .nav-arrow {
     font-size: 48px;
     margin: 30px;
@@ -25,14 +38,53 @@
     color: rgba(0, 0, 0, 0.121);
 }
 
+.index-numbers {
+    position: absolute;
+    bottom: calc(0.3 * var(--mscale));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    z-index: 5;
+}
+
+.index-number {
+    width: 4%;
+}
+
+.index-number.one {
+    width: 3%;
+}
+
+.index-number.active,
+.index-number:hover {
+    filter:
+        invert(100%)
+        sepia(90%)
+        saturate(7500%)
+        hue-rotate(10deg)
+        brightness(99%)
+        contrast(102%);
+}
+
 .pdf-viewfinder {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 100%;
     width: calc(7 * var(--mscale));
     height: 100%;
     overflow: hidden;
+    transition:
+        margin-top 1s ease-in-out,
+        opacity .6s ease-in-out,
+}
+
+.pdf-viewfinder.pre,
+.pdf-viewfinder.post {
+    margin-top: calc(13 * var(--mscale));
+    opacity: 0%;
 }
 
 .project-pdf {
@@ -49,7 +101,7 @@
 
 .project-pdf.left {
     margin-right: 200%;
-    /* opacity: 50%; */
+    opacity: 70%;
 }
 
 .project-pdf.center {
@@ -60,5 +112,5 @@
 
 .project-pdf.right {
     margin-left: 200%;
-    /* opacity: 50%; */
+    opacity: 70%;
 }

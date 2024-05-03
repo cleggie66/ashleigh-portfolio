@@ -3,6 +3,16 @@ import { useSelector } from "react-redux";
 import "./ProjectPage.css";
 import { useEffect, useState } from "react";
 
+import num1 from "../../media/number-exports/01.png";
+import num2 from "../../media/number-exports/02.png";
+import num3 from "../../media/number-exports/03.png";
+import num4 from "../../media/number-exports/04.png";
+import num5 from "../../media/number-exports/05.png";
+import num6 from "../../media/number-exports/06.png";
+import num7 from "../../media/number-exports/07.png";
+import num8 from "../../media/number-exports/08.png";
+
+
 
 function ProjectPage() {
     const pageState = useSelector(state => state.pages);
@@ -13,7 +23,7 @@ function ProjectPage() {
     const pdfPageFiles = require.context('../../media/portfolio-pages', true);
     const pdfPages = pdfPageFiles.keys().map(image => pdfPageFiles(image));
 
-    const visibility = pageState.index;
+    const visibility = pageState.projects;
 
     function pageCheck(num) {
         if (num > activePage) {
@@ -51,7 +61,7 @@ function ProjectPage() {
                         setActivePage(activePage - 1);
                     }}
                 />
-                <div className="pdf-viewfinder">
+                <div className={`pdf-viewfinder ${visibility}`}>
                     <img src={pdfPages[0]} className={`project-pdf ${pageCheck(1)}`} alt="project-page-1" />
                     <img src={pdfPages[1]} className={`project-pdf ${pageCheck(2)}`} alt="project-page-1" />
                     <img src={pdfPages[2]} className={`project-pdf ${pageCheck(3)}`} alt="project-page-1" />
@@ -74,6 +84,17 @@ function ProjectPage() {
                         setActivePage(activePage + 1);
                     }}
                 />
+                <div className="index-numbers">
+                    <img src={num1} alt="0" onClick={() => setActivePage(1)} className={`index-number ${activePage === 1 ? "active" : ""} one`} />
+                    <img src={num2} alt="0" onClick={() => setActivePage(2)} className={`index-number ${activePage > 1 && activePage < 5 ? "active" : ""}`} />
+                    <img src={num3} alt="0" onClick={() => setActivePage(5)} className={`index-number ${activePage > 4 && activePage < 9 ? "active" : ""}`} />
+                    <img src={num4} alt="0" onClick={() => setActivePage(9)} className={`index-number ${activePage === 9 ? "active" : ""}`} />
+                    <img src={num5} alt="0" onClick={() => setActivePage(10)} className={`index-number ${activePage === 10 ? "active" : ""}`} />
+                    <img src={num6} alt="0" onClick={() => setActivePage(11)} className={`index-number ${activePage > 10 && activePage < 13 ? "active" : ""}`} />
+                    <img src={num7} alt="0" onClick={() => setActivePage(13)} className={`index-number ${activePage === 13 ? "active" : ""}`} />
+                    <img src={num8} alt="0" onClick={() => setActivePage(14)} className={`index-number ${activePage === 14 ? "active" : ""}`} />
+                </div>
+
             </div>
         </>
     )

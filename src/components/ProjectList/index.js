@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 
 import card2 from "../../media/png-exports/card-2.png";
 import card3 from "../../media/png-exports/card-3.png";
@@ -21,11 +21,22 @@ import num8 from "../../media/number-exports/08.png";
 import num9 from "../../media/number-exports/09.png";
 
 import "./ProjectList.css"
+import { resetPage, setPage } from "../../store/pages";
 
 
 function ProjectList() {
+    const dispatch = useDispatch();
+
     const pageState = useSelector(state => state.pages);
     const visibility = pageState.index;
+
+    const changePage = (page) => {
+        dispatch(setPage(page));
+
+        setTimeout(() => {
+            dispatch(resetPage())
+        }, 1000);
+    };
 
     const projectCardItems = [
         {
@@ -67,11 +78,6 @@ function ProjectList() {
             name: "project8",
             numSrc: num8,
             cardSrc: card6,
-        },
-        {
-            name: "project9",
-            numSrc: num9,
-            cardSrc: card3,
         }
     ]
 
@@ -82,7 +88,7 @@ function ProjectList() {
                 projectCardItems.map((item) => {
                     return (
                         <div className="image-layer">
-                            <div className={`${item.name} ${visibility} project-index-card`}>
+                            <div className={`${item.name} ${visibility} project-index-card`} onClick={() => changePage("projects")}>
                                 <img src={item.numSrc} alt="0" className="title-card-number" />
                                 <img src={item.cardSrc} alt="0" className="core" />
                             </div>

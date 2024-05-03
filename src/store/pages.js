@@ -43,7 +43,7 @@ const initialState = {
     nav: "home",
     home: "active",
     index: "pre",
-    project: "pre",
+    projects: "pre",
 };
 
 export default function reducer(state = initialState, action) {

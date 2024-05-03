@@ -21,8 +21,6 @@ function App() {
   const pageState = useSelector(state => state.pages);
   const nav = pageState.nav;
 
-  console.log({ nav })
-
   const changePage = (page) => {
     dispatch(setPage(page));
 
@@ -53,8 +51,8 @@ function App() {
           />
         </div>
       </div>
-      {/* <HomePage />
-      <ProjectList /> */}
+      <HomePage />
+      <ProjectList />
       <ProjectPage />
       <div className={`black-layer`}>
         <img src={overlay} alt="0" className="background" />

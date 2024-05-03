@@ -87,6 +87,7 @@ button {
 }
 
 .image-layer>div.project-index-card {
+  pointer-events: all;
   transition:
     margin-left 1s ease-in-out,
     margin-right 1s ease-in-out,

@@ -21,6 +21,12 @@ code {
     monospace;
 }
 
+button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
 .outline-hidden {
   opacity: 0%;
 }

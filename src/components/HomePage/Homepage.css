@@ -1,3 +1,4 @@
+.pre>.hit-box,
 .post>.hit-box {
     pointer-events: none;
 }

@@ -24,6 +24,14 @@
     font-size: 48px;
     margin: 30px;
     color: rgba(9, 5, 5, 0.454);
+    opacity: 100%;
+    transition:
+        opacity .6s ease-in-out,
+}
+
+.nav-arrow.pre,
+.nav-arrow.post {
+    opacity: 0%;
 }
 
 .nav-arrow:hover {
@@ -40,31 +48,63 @@
 
 .index-numbers {
     position: absolute;
-    bottom: calc(0.3 * var(--mscale));
+    width: calc(7 * var(--mscale));
+    bottom: calc(0.4 * var(--mscale));
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 3%;
+    justify-content: space-between;
     z-index: 5;
 }
 
 .index-number {
-    width: 4%;
+    width: 6%;
 }
 
 .index-number.one {
-    width: 3%;
+    transition: margin-bottom 0.6s ease-in-out .1s,
 }
 
-.index-number.active,
+.index-number.two {
+    transition: margin-bottom 0.6s ease-in-out .2s,
+}
+
+.index-number.three {
+    transition: margin-bottom 0.6s ease-in-out .3s,
+}
+
+.index-number.four {
+    transition: margin-bottom 0.6s ease-in-out .4s,
+}
+
+.index-number.five {
+    transition: margin-bottom 0.6s ease-in-out .5s,
+}
+
+.index-number.six {
+    transition: margin-bottom 0.6s ease-in-out .6s,
+}
+
+.index-number.seven {
+    transition: margin-bottom 0.6s ease-in-out .7s,
+}
+
+.index-number.eight {
+    transition: margin-bottom 0.6s ease-in-out .8s,
+}
+
+.index-number.one {
+    width: 4%;
+}
+
+.index-number.highlighted,
 .index-number:hover {
     filter:
-        invert(100%)
-        sepia(90%)
-        saturate(7500%)
-        hue-rotate(10deg)
-        brightness(99%)
-        contrast(102%);
+        invert(100%) sepia(90%) saturate(7500%) hue-rotate(10deg) brightness(99%) contrast(102%);
+}
+
+.index-number.pre,
+.index-number.post {
+    margin-bottom: calc(-1.5 * var(--mscale));
 }
 
 .pdf-viewfinder {

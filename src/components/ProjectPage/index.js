@@ -55,7 +55,7 @@ function ProjectPage() {
         <>
             <div className="pdf-page">
                 <button
-                    class="fa-solid fa-caret-left nav-arrow"
+                    class={`fa-solid fa-caret-left nav-arrow ${visibility}`}
                     disabled={leftArrowDisabled}
                     onClick={() => {
                         setActivePage(activePage - 1);
@@ -78,21 +78,37 @@ function ProjectPage() {
                     <img src={pdfPages[13]} className={`project-pdf ${pageCheck(14)}`} alt="project-page-1" />
                 </div>
                 <button
-                    class="fa-solid fa-caret-right nav-arrow"
+                    class={`fa-solid fa-caret-right nav-arrow ${visibility}`}
                     disabled={rightArrowDisabled}
                     onClick={() => {
                         setActivePage(activePage + 1);
                     }}
                 />
                 <div className="index-numbers">
-                    <img src={num1} alt="0" onClick={() => setActivePage(1)} className={`index-number ${activePage === 1 ? "active" : ""} one`} />
-                    <img src={num2} alt="0" onClick={() => setActivePage(2)} className={`index-number ${activePage > 1 && activePage < 5 ? "active" : ""}`} />
-                    <img src={num3} alt="0" onClick={() => setActivePage(5)} className={`index-number ${activePage > 4 && activePage < 9 ? "active" : ""}`} />
-                    <img src={num4} alt="0" onClick={() => setActivePage(9)} className={`index-number ${activePage === 9 ? "active" : ""}`} />
-                    <img src={num5} alt="0" onClick={() => setActivePage(10)} className={`index-number ${activePage === 10 ? "active" : ""}`} />
-                    <img src={num6} alt="0" onClick={() => setActivePage(11)} className={`index-number ${activePage > 10 && activePage < 13 ? "active" : ""}`} />
-                    <img src={num7} alt="0" onClick={() => setActivePage(13)} className={`index-number ${activePage === 13 ? "active" : ""}`} />
-                    <img src={num8} alt="0" onClick={() => setActivePage(14)} className={`index-number ${activePage === 14 ? "active" : ""}`} />
+                    <img
+                        src={num1} alt="0" onClick={() => setActivePage(1)}
+                        className={`index-number one ${visibility} ${activePage === 1 ? "highlighted" : ""}`} />
+                    <img
+                        src={num2} alt="0" onClick={() => setActivePage(2)}
+                        className={`index-number two ${visibility} ${activePage > 1 && activePage < 5 ? "highlighted" : ""}`} />
+                    <img
+                        src={num3} alt="0" onClick={() => setActivePage(5)}
+                        className={`index-number three ${visibility} ${activePage > 4 && activePage < 9 ? "highlighted" : ""}`} />
+                    <img
+                        src={num4} alt="0" onClick={() => setActivePage(9)}
+                        className={`index-number four ${visibility} ${activePage === 9 ? "highlighted" : ""}`} />
+                    <img
+                        src={num5} alt="0" onClick={() => setActivePage(10)}
+                        className={`index-number five ${visibility} ${activePage === 10 ? "highlighted" : ""}`} />
+                    <img
+                        src={num6} alt="0" onClick={() => setActivePage(11)}
+                        className={`index-number six ${visibility} ${activePage > 10 && activePage < 13 ? "highlighted" : ""}`} />
+                    <img
+                        src={num7} alt="0" onClick={() => setActivePage(13)}
+                        className={`index-number seven ${visibility} ${activePage === 13 ? "highlighted" : ""}`} />
+                    <img
+                        src={num8} alt="0" onClick={() => setActivePage(14)}
+                        className={`index-number eight ${visibility} ${activePage === 14 ? "highlighted" : ""}`} />
                 </div>
 
             </div>

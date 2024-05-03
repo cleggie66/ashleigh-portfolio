@@ -18,7 +18,15 @@ import num5 from "../../media/number-exports/05.png";
 import num6 from "../../media/number-exports/06.png";
 import num7 from "../../media/number-exports/07.png";
 import num8 from "../../media/number-exports/08.png";
-import num9 from "../../media/number-exports/09.png";
+
+import title1 from "../../media/index-title-exports/title-1.png";
+import title2 from "../../media/index-title-exports/title-2.png";
+import title3 from "../../media/index-title-exports/title-3.png";
+import title4 from "../../media/index-title-exports/title-4.png";
+import title5 from "../../media/index-title-exports/title-5.png";
+import title6 from "../../media/index-title-exports/title-6.png";
+import title7 from "../../media/index-title-exports/title-7.png";
+import title8 from "../../media/index-title-exports/title-8.png";
 
 import "./ProjectList.css"
 import { resetPage, setPage } from "../../store/pages";
@@ -43,41 +51,49 @@ function ProjectList() {
             name: "project1",
             numSrc: num1,
             cardSrc: card4,
+            titleSrc: title1,
         },
         {
             name: "project2",
             numSrc: num2,
             cardSrc: card11,
+            titleSrc: title2,
         },
         {
             name: "project3",
             numSrc: num3,
             cardSrc: card12,
+            titleSrc: title3,
         },
         {
             name: "project4",
             numSrc: num4,
             cardSrc: card7,
+            titleSrc: title4,
         },
         {
             name: "project5",
             numSrc: num5,
             cardSrc: card2,
+            titleSrc: title5,
         },
         {
             name: "project6",
             numSrc: num6,
             cardSrc: card16,
+            titleSrc: title6,
         },
         {
             name: "project7",
             numSrc: num7,
             cardSrc: card17,
+            titleSrc: title7,
         },
         {
             name: "project8",
             numSrc: num8,
             cardSrc: card6,
+            titleSrc: title8,
         }
     ]
 
@@ -90,6 +106,7 @@ function ProjectList() {
                         <div className="image-layer">
                             <div className={`${item.name} ${visibility} project-index-card`} onClick={() => changePage("projects")}>
                                 <img src={item.numSrc} alt="0" className="title-card-number" />
+                                <img src={item.titleSrc} alt="0" className="index-card-title" />
                                 <img src={item.cardSrc} alt="0" className="core" />
                             </div>
                         </div>

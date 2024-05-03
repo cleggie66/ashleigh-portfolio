@@ -84,6 +84,8 @@ button {
       margin-top 1s ease-in-out,
       margin-bottom 1s ease-in-out,
       rotate 1s ease-in-out,
+      width 1s ease-in-out,
+      opacity .3s linear .8s,
 }
 
 .image-layer>div.project-index-card {
@@ -95,6 +97,10 @@ button {
     margin-bottom 1s ease-in-out,
     rotate 1s ease-in-out,
     scale 1s ease-in-out,
+}
+
+.image-layer>div.pre {
+  opacity: 0%;
 }
 
 .image-layer>div.post {
@@ -157,10 +163,10 @@ button {
   margin-right: calc(3.4 * var(--mscale));
 }
 
-.project-card.post {
-  margin-top: calc(3 * var(--mscale));
-  margin-left: calc(7 * var(--mscale));
-  rotate: 90deg;
+.project-card.projects {
+  opacity: 0%;
+  margin-bottom: calc(2.8 * var(--mscale));
+  margin-left: calc(8 * var(--mscale));
 }
 
 .ashleigh-card {
@@ -170,7 +176,11 @@ button {
   z-index: 4;
 }
 
-.ashleigh-card.index {
-  margin-bottom: calc(3 * var(--mscale));
-  margin-right: calc(3 * var(--mscale));
+.ashleigh-card.index,
+.ashleigh-card.projects {
+  width: calc(2.5 * var(--mscale));
+  margin-left: calc(0.5 * var(--mscale));
+  margin-top: calc(1.3 * var(--mscale));
+  margin-right: auto;
+  margin-bottom: auto;
 }

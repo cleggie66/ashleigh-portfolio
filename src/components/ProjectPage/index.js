@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import "./ProjectPage.css";
 import { useEffect, useState } from "react";
@@ -11,11 +11,16 @@ import num5 from "../../media/number-exports/05.png";
 import num6 from "../../media/number-exports/06.png";
 import num7 from "../../media/number-exports/07.png";
 import num8 from "../../media/number-exports/08.png";
+import { setProject } from "../../store/activeProject";
 
 
 
 function ProjectPage() {
+    const dispatch = useDispatch();
+
     const pageState = useSelector(state => state.pages);
+    const projectState = useSelector( state => state.activeProject);
+
     const [activePage, setActivePage] = useState(1);
     const [leftArrowDisabled, setLeftArrowDisabled] = useState(true);
     const [rightArrowDisabled, setRightArrowDisabled] = useState(false);
@@ -24,11 +29,13 @@ function ProjectPage() {
     const pdfPages = pdfPageFiles.keys().map(image => pdfPageFiles(image));
 
     const visibility = pageState.projects;
+    const activeProject = projectState.activeProject;
+    console.log({ activeProject })
 
     function pageCheck(num) {
-        if (num > activePage) {
+        if (num > activeProject) {
             return "right"
-        } else if (num < activePage) {
+        } else if (num < activeProject) {
             return "left"
         } else {
             return "center"
@@ -36,20 +43,20 @@ function ProjectPage() {
     };
 
     useEffect(() => {
-        if (activePage <= 1) {
+        if (activeProject <= 1) {
             setLeftArrowDisabled(true)
         } else {
             setLeftArrowDisabled(false)
         };
-    }, [activePage]);
+    }, [activeProject]);
 
     useEffect(() => {
-        if (activePage >= pdfPages.length) {
+        if (activeProject >= pdfPages.length) {
             setRightArrowDisabled(true)
         } else {
             setRightArrowDisabled(false)
         };
-    }, [activePage, pdfPages.length]);
+    }, [activeProject, pdfPages.length]);
 
     return (
         <>
@@ -59,7 +66,7 @@ function ProjectPage() {
                         class={`fa-solid fa-caret-left nav-arrow ${visibility}`}
                         disabled={leftArrowDisabled}
                         onClick={() => {
-                            setActivePage(activePage - 1);
+                            dispatch(setProject(activeProject - 1))
                         }}
                     />
                     <div className={`pdf-viewfinder ${visibility}`}>
@@ -82,35 +89,35 @@ function ProjectPage() {
                         class={`fa-solid fa-caret-right nav-arrow ${visibility}`}
                         disabled={rightArrowDisabled}
                         onClick={() => {
-                            setActivePage(activePage + 1);
+                            dispatch(setProject(activeProject + 1))
                         }}
                     />
                 </div>
                 <div className="index-numbers">
                     <img
-                        src={num1} alt="0" onClick={() => setActivePage(1)}
-                        className={`index-number one ${visibility} ${activePage === 1 ? "highlighted" : ""}`} />
+                        src={num1} alt="0" onClick={() => dispatch(setProject(1))}
+                        className={`index-number one ${visibility} ${activeProject === 1 ? "highlighted" : ""}`} />
                     <img
-                        src={num2} alt="0" onClick={() => setActivePage(2)}
-                        className={`index-number two ${visibility} ${activePage > 1 && activePage < 5 ? "highlighted" : ""}`} />
+                        src={num2} alt="0" onClick={() => dispatch(setProject(2))}
+                        className={`index-number two ${visibility} ${activeProject > 1 && activeProject < 5 ? "highlighted" : ""}`} />
                     <img
-                        src={num3} alt="0" onClick={() => setActivePage(5)}
-                        className={`index-number three ${visibility} ${activePage > 4 && activePage < 9 ? "highlighted" : ""}`} />
+                        src={num3} alt="0" onClick={() => dispatch(setProject(5))}
+                        className={`index-number three ${visibility} ${activeProject > 4 && activeProject < 9 ? "highlighted" : ""}`} />
                     <img
-                        src={num4} alt="0" onClick={() => setActivePage(9)}
-                        className={`index-number four ${visibility} ${activePage === 9 ? "highlighted" : ""}`} />
+                        src={num4} alt="0" onClick={() => dispatch(setProject(9))}
+                        className={`index-number four ${visibility} ${activeProject === 9 ? "highlighted" : ""}`} />
                     <img
-                        src={num5} alt="0" onClick={() => setActivePage(10)}
-                        className={`index-number five ${visibility} ${activePage === 10 ? "highlighted" : ""}`} />
+                        src={num5} alt="0" onClick={() => dispatch(setProject(10))}
+                        className={`index-number five ${visibility} ${activeProject === 10 ? "highlighted" : ""}`} />
                     <img
-                        src={num6} alt="0" onClick={() => setActivePage(11)}
-                        className={`index-number six ${visibility} ${activePage > 10 && activePage < 13 ? "highlighted" : ""}`} />
+                        src={num6} alt="0" onClick={() => dispatch(setProject(11))}
+                        className={`index-number six ${visibility} ${activeProject > 10 && activeProject < 13 ? "highlighted" : ""}`} />
                     <img
-                        src={num7} alt="0" onClick={() => setActivePage(13)}
-                        className={`index-number seven ${visibility} ${activePage === 13 ? "highlighted" : ""}`} />
+                        src={num7} alt="0" onClick={() => dispatch(setProject(13))}
+                        className={`index-number seven ${visibility} ${activeProject === 13 ? "highlighted" : ""}`} />
                     <img
-                        src={num8} alt="0" onClick={() => setActivePage(14)}
-                        className={`index-number eight ${visibility} ${activePage === 14 ? "highlighted" : ""}`} />
+                        src={num8} alt="0" onClick={() => dispatch(setProject(14))}
+                        className={`index-number eight ${visibility} ${activeProject === 14 ? "highlighted" : ""}`} />
                 </div>
 
             </div>

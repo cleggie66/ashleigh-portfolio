@@ -6,6 +6,7 @@ import "./UnderlineHitbox.css";
 import testSrc from "../../media/title-underline-exports/title-1-underline/title-1-underline14.png"
 import { useDispatch } from 'react-redux';
 import { resetPage, setPage } from '../../store/pages';
+import { setProject } from '../../store/activeProject';
 
 
 function UnderlineGenerator(props) {
@@ -49,6 +50,7 @@ function UnderlineGenerator(props) {
     const frameCount = 14;
     const item = props.underline;
     const pageTarget = props.onClickPage;
+    const startingPage = props.onClickProject;
 
     const _intervalRef = useRef(null);
     const [startCounter, setStartCounter] = useState(false);
@@ -98,7 +100,10 @@ function UnderlineGenerator(props) {
             }
             <div
                 className="underline-hit-box"
-                onClick={() => changePage(pageTarget)}
+                onClick={() => {
+                    changePage(pageTarget)
+                    if (startingPage) dispatch(setProject(startingPage))
+                }}
                 onMouseOver={() => {
                     setStartCounter(true)
                     setEndCounter(false)

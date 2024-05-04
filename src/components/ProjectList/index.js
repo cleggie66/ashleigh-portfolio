@@ -45,48 +45,56 @@ function ProjectList() {
             numSrc: num1,
             cardSrc: card4,
             titleSrc: title1,
+            startingPage: 1,
         },
         {
             name: "project2",
             numSrc: num2,
             cardSrc: card11,
             titleSrc: title2,
+            startingPage: 2,
         },
         {
             name: "project3",
             numSrc: num3,
             cardSrc: card12,
             titleSrc: title3,
+            startingPage: 5,
         },
         {
             name: "project4",
             numSrc: num4,
             cardSrc: card7,
             titleSrc: title4,
+            startingPage: 9,
         },
         {
             name: "project5",
             numSrc: num5,
             cardSrc: card2,
             titleSrc: title5,
+            startingPage: 10,
         },
         {
             name: "project6",
             numSrc: num6,
             cardSrc: card16,
             titleSrc: title6,
+            startingPage: 11,
         },
         {
             name: "project7",
             numSrc: num7,
             cardSrc: card17,
             titleSrc: title7,
+            startingPage: 13,
         },
         {
             name: "project8",
             numSrc: num8,
             cardSrc: card6,
             titleSrc: title8,
+            startingPage: 14,
         }
     ]
 
@@ -100,7 +108,7 @@ function ProjectList() {
                             <div className={`${item.name} ${visibility} project-index-card`}>
                                 <img src={item.numSrc} alt="0" className="title-card-number" />
                                 <img src={item.titleSrc} alt="0" className="index-card-title" />
-                                <UnderlineGenerator underline={item.name} onClickPage="projects"/>
+                                <UnderlineGenerator underline={item.name} onClickPage="projects" onClickProject={item.startingPage}/>
                                 <img src={item.cardSrc} alt="0" className="core" />
                             </div>
                         </div>

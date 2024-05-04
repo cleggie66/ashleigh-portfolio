@@ -1,9 +1,11 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { thunk } from 'redux-thunk';
-import pages from "./pages"
+import pages from "./pages";
+import activeProject from "./activeProject";
 
 const rootReducer = combineReducers({
-    pages
+    pages,
+    activeProject
 });
 
 let enhancer;

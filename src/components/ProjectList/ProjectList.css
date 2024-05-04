@@ -3,10 +3,6 @@
     opacity: 0%;
 }
 
-.project-index-card.post {
-    margin-left: calc(8 * var(--mscale));
-}
-
 .title-card-number {
     position: absolute;
     width: 50%;
@@ -26,9 +22,15 @@
     z-index: 3;
 }
 
+
 .project1.pre {
     margin-left: calc(5.8 * var(--mscale));
     margin-top: calc(3.3 * var(--mscale));
+}
+
+.project1.post {
+    margin-right: calc(4 * var(--mscale));
+    margin-bottom: calc(4 * var(--mscale));
 }
 
 .project1>.title-card-number {
@@ -54,6 +56,11 @@
     margin-top: calc(3.3 * var(--mscale));
 }
 
+.project2.post {
+    margin-left: calc(4 * var(--mscale));
+    margin-bottom: calc(4 * var(--mscale));
+}
+
 .project2>.title-card-number {
     width: 25%;
     bottom: calc(0.08 * var(--mscale));
@@ -75,6 +82,11 @@
 .project3.pre {
     margin-left: calc(7.7 * var(--mscale));
     margin-top: calc(0.4 * var(--mscale));
+}
+
+.project3.post {
+    margin-bottom: calc(1 * var(--mscale));
+    margin-right: calc(8 * var(--mscale));
 }
 
 .project3>.title-card-number {
@@ -100,6 +112,10 @@
     margin-top: calc(0.6 * var(--mscale));
 }
 
+.project4.post {
+    margin-bottom: calc(8 * var(--mscale));
+}
+
 .project4>.title-card-number {
     width: 40%;
     bottom: calc(0.08 * var(--mscale));
@@ -121,6 +137,11 @@
 .project5.pre {
     margin-left: calc(2.9 * var(--mscale));
     margin-top: calc(0.6 * var(--mscale));
+}
+
+.project5.post {
+    margin-left: calc(10 * var(--mscale));
+    margin-bottom: calc(6 * var(--mscale));
 }
 
 .project5>.title-card-number {
@@ -146,6 +167,10 @@
     margin-top: calc(1.4 * var(--mscale));
 }
 
+.project6.post {
+    margin-left: calc(8 * var(--mscale));
+}
+
 .project6>.title-card-number {
     width: 45%;
     bottom: calc(0.08 * var(--mscale));
@@ -167,6 +192,10 @@
 .project7.pre {
     margin-left: calc(6.6 * var(--mscale));
     margin-bottom: calc(2.2 * var(--mscale));
+}
+
+.project7.post {
+    margin-right: calc(10 * var(--mscale));
 }
 
 .project7>.title-card-number {
@@ -191,6 +220,10 @@
 .project8.pre {
     margin-left: calc(3.7 * var(--mscale));
     margin-bottom: calc(2.4 * var(--mscale));
+}
+
+.project8.post {
+    margin-left: calc(10 * var(--mscale));
 }
 
 .project8>.title-card-number {

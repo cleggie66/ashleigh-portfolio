@@ -165,8 +165,8 @@ button {
 
 .project-card.projects {
   opacity: 0%;
-  margin-bottom: calc(2.8 * var(--mscale));
-  margin-left: calc(8 * var(--mscale));
+  margin-bottom: calc(2 * var(--mscale));
+  margin-right: calc(10 * var(--mscale));
 }
 
 .ashleigh-card {

@@ -28,23 +28,16 @@ import title6 from "../../media/index-title-exports/title-6.png";
 import title7 from "../../media/index-title-exports/title-7.png";
 import title8 from "../../media/index-title-exports/title-8.png";
 
+import testSrc from "../../media/title-underline-exports/title-1-underline/title-1-underline14.png"
+
 import "./ProjectList.css"
-import { resetPage, setPage } from "../../store/pages";
+import UnderlineGenerator from "../UnderlineGenerator";
 
 
 function ProjectList() {
-    const dispatch = useDispatch();
-
     const pageState = useSelector(state => state.pages);
     const visibility = pageState.index;
 
-    const changePage = (page) => {
-        dispatch(setPage(page));
-
-        setTimeout(() => {
-            dispatch(resetPage())
-        }, 1000);
-    };
 
     const projectCardItems = [
         {
@@ -104,9 +97,10 @@ function ProjectList() {
                 projectCardItems.map((item) => {
                     return (
                         <div className="image-layer">
-                            <div className={`${item.name} ${visibility} project-index-card`} onClick={() => changePage("projects")}>
+                            <div className={`${item.name} ${visibility} project-index-card`}>
                                 <img src={item.numSrc} alt="0" className="title-card-number" />
                                 <img src={item.titleSrc} alt="0" className="index-card-title" />
+                                <UnderlineGenerator underline={item.name} onClickPage="projects"/>
                                 <img src={item.cardSrc} alt="0" className="core" />
                             </div>
                         </div>

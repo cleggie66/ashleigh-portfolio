@@ -12,6 +12,7 @@ import titleCardSquareText from "./media/png-exports/title-card-square-text.png"
 
 import plainWall from "./media/png-exports/plain-wall.png";
 import overlay from "./media/png-exports/overlay.png";
+import UnderlineGenerator from "./components/UnderlineGenerator";
 
 
 
@@ -35,20 +36,14 @@ function App() {
         <div className={`ashleigh-card ${nav}`}>
           <img src={titleCardRectangleText} alt="0" className="title-card-text" />
           <img src={titleCardRectangle} alt="0" className="core" />
-          <div
-            className="hit-box"
-            onClick={() => changePage("home")}
-          />
+          <UnderlineGenerator underline="titleRectangle" onClickPage="home" />
         </div>
       </div>
       <div className="image-layer">
         <div className={`project-card ${nav}`}>
           <img src={titleCardSquareText} alt="0" className="title-card-text" />
           <img src={titleCardSquare} alt="0" className="core" />
-          <div
-            className="hit-box"
-            onClick={() => changePage("index")}
-          />
+          <UnderlineGenerator underline="titleSquare" onClickPage="index" />
         </div>
       </div>
       <HomePage />

@@ -1,0 +1,23 @@
+.underline-hit-box {
+    position: absolute;
+    z-index: 10;
+    opacity: 0%;
+    background: rgb(27, 171, 65);
+    pointer-events: all;
+    width: 100%;
+    height: 100%;
+}
+
+.ashleigh-card>.underline-hit-box {
+    width: 37%;
+    height: 35%;
+    left: 32%;
+    top: 40%
+}
+
+.project-card>.underline-hit-box {
+    width: 20%;
+    height: 32%;
+    left: 40%;
+    top: 30%
+}

@@ -1,6 +1,7 @@
 .pdf-page {
     position: absolute;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -16,8 +17,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+}
+
+.pdf-viewfinder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 100%;
+    height: calc(4.3 * var(--mscale));
+    width: calc(6 * var(--mscale));
+    overflow: hidden;
+    transition:
+        margin-top 1s ease-in-out,
+        opacity .6s ease-in-out,
+}
+
+.pdf-viewfinder.pre,
+.pdf-viewfinder.post {
+    margin-top: calc(13 * var(--mscale));
+    opacity: 0%;
+}
+
+.project-pdf {
+    position: absolute;
     width: 100%;
+    transition:
+        margin-left 1s ease-in-out,
+        margin-right 1s ease-in-out,
+        margin-top 1s ease-in-out,
+        margin-bottom 1s ease-in-out,
+        rotate 1s ease-in-out,
+        opacity .6s ease-in-out,
 }
 
 .nav-arrow {
@@ -47,9 +78,8 @@
 }
 
 .index-numbers {
-    position: absolute;
-    width: calc(7 * var(--mscale));
-    bottom: calc(0.4 * var(--mscale));
+    position: relative;
+    width: calc(6 * var(--mscale));
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -105,38 +135,6 @@
 .index-number.pre,
 .index-number.post {
     margin-bottom: calc(-1.5 * var(--mscale));
-}
-
-.pdf-viewfinder {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 100%;
-    width: calc(7 * var(--mscale));
-    height: 100%;
-    overflow: hidden;
-    transition:
-        margin-top 1s ease-in-out,
-        opacity .6s ease-in-out,
-}
-
-.pdf-viewfinder.pre,
-.pdf-viewfinder.post {
-    margin-top: calc(13 * var(--mscale));
-    opacity: 0%;
-}
-
-.project-pdf {
-    position: absolute;
-    width: 100%;
-    transition:
-        margin-left 1s ease-in-out,
-        margin-right 1s ease-in-out,
-        margin-top 1s ease-in-out,
-        margin-bottom 1s ease-in-out,
-        rotate 1s ease-in-out,
-        opacity .6s ease-in-out,
 }
 
 .project-pdf.left {

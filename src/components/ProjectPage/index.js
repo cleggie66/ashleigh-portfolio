@@ -54,36 +54,38 @@ function ProjectPage() {
     return (
         <>
             <div className="pdf-page">
-                <button
-                    class={`fa-solid fa-caret-left nav-arrow ${visibility}`}
-                    disabled={leftArrowDisabled}
-                    onClick={() => {
-                        setActivePage(activePage - 1);
-                    }}
-                />
-                <div className={`pdf-viewfinder ${visibility}`}>
-                    <img src={pdfPages[0]} className={`project-pdf ${pageCheck(1)}`} alt="project-page-1" />
-                    <img src={pdfPages[1]} className={`project-pdf ${pageCheck(2)}`} alt="project-page-1" />
-                    <img src={pdfPages[2]} className={`project-pdf ${pageCheck(3)}`} alt="project-page-1" />
-                    <img src={pdfPages[3]} className={`project-pdf ${pageCheck(4)}`} alt="project-page-1" />
-                    <img src={pdfPages[4]} className={`project-pdf ${pageCheck(5)}`} alt="project-page-1" />
-                    <img src={pdfPages[5]} className={`project-pdf ${pageCheck(6)}`} alt="project-page-1" />
-                    <img src={pdfPages[6]} className={`project-pdf ${pageCheck(7)}`} alt="project-page-1" />
-                    <img src={pdfPages[7]} className={`project-pdf ${pageCheck(8)}`} alt="project-page-1" />
-                    <img src={pdfPages[8]} className={`project-pdf ${pageCheck(9)}`} alt="project-page-1" />
-                    <img src={pdfPages[9]} className={`project-pdf ${pageCheck(10)}`} alt="project-page-1" />
-                    <img src={pdfPages[10]} className={`project-pdf ${pageCheck(11)}`} alt="project-page-1" />
-                    <img src={pdfPages[11]} className={`project-pdf ${pageCheck(12)}`} alt="project-page-1" />
-                    <img src={pdfPages[12]} className={`project-pdf ${pageCheck(13)}`} alt="project-page-1" />
-                    <img src={pdfPages[13]} className={`project-pdf ${pageCheck(14)}`} alt="project-page-1" />
+                <div className="pdf-main-content">
+                    <button
+                        class={`fa-solid fa-caret-left nav-arrow ${visibility}`}
+                        disabled={leftArrowDisabled}
+                        onClick={() => {
+                            setActivePage(activePage - 1);
+                        }}
+                    />
+                    <div className={`pdf-viewfinder ${visibility}`}>
+                        <img src={pdfPages[0]} className={`project-pdf ${pageCheck(1)}`} alt="project-page-1" />
+                        <img src={pdfPages[1]} className={`project-pdf ${pageCheck(2)}`} alt="project-page-1" />
+                        <img src={pdfPages[2]} className={`project-pdf ${pageCheck(3)}`} alt="project-page-1" />
+                        <img src={pdfPages[3]} className={`project-pdf ${pageCheck(4)}`} alt="project-page-1" />
+                        <img src={pdfPages[4]} className={`project-pdf ${pageCheck(5)}`} alt="project-page-1" />
+                        <img src={pdfPages[5]} className={`project-pdf ${pageCheck(6)}`} alt="project-page-1" />
+                        <img src={pdfPages[6]} className={`project-pdf ${pageCheck(7)}`} alt="project-page-1" />
+                        <img src={pdfPages[7]} className={`project-pdf ${pageCheck(8)}`} alt="project-page-1" />
+                        <img src={pdfPages[8]} className={`project-pdf ${pageCheck(9)}`} alt="project-page-1" />
+                        <img src={pdfPages[9]} className={`project-pdf ${pageCheck(10)}`} alt="project-page-1" />
+                        <img src={pdfPages[10]} className={`project-pdf ${pageCheck(11)}`} alt="project-page-1" />
+                        <img src={pdfPages[11]} className={`project-pdf ${pageCheck(12)}`} alt="project-page-1" />
+                        <img src={pdfPages[12]} className={`project-pdf ${pageCheck(13)}`} alt="project-page-1" />
+                        <img src={pdfPages[13]} className={`project-pdf ${pageCheck(14)}`} alt="project-page-1" />
+                    </div>
+                    <button
+                        class={`fa-solid fa-caret-right nav-arrow ${visibility}`}
+                        disabled={rightArrowDisabled}
+                        onClick={() => {
+                            setActivePage(activePage + 1);
+                        }}
+                    />
                 </div>
-                <button
-                    class={`fa-solid fa-caret-right nav-arrow ${visibility}`}
-                    disabled={rightArrowDisabled}
-                    onClick={() => {
-                        setActivePage(activePage + 1);
-                    }}
-                />
                 <div className="index-numbers">
                     <img
                         src={num1} alt="0" onClick={() => setActivePage(1)}

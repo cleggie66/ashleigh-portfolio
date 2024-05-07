@@ -163,6 +163,11 @@ button {
   margin-right: calc(3.4 * var(--mscale));
 }
 
+.project-card.about {
+  opacity: 0%;
+  margin-left: calc(10 * var(--mscale));
+}
+
 .project-card.projects {
   opacity: 0%;
   margin-bottom: calc(2 * var(--mscale));

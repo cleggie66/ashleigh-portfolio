@@ -42,6 +42,7 @@ export const resetPage = () => {
 const initialState = {
     nav: "home",
     home: "active",
+    about: "pre",
     index: "pre",
     projects: "pre",
 };

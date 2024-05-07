@@ -13,22 +13,13 @@ import titleCardSquareText from "./media/png-exports/title-card-square-text.png"
 import plainWall from "./media/png-exports/plain-wall.png";
 import overlay from "./media/png-exports/overlay.png";
 import UnderlineGenerator from "./components/UnderlineGenerator";
+import AboutPage from "./components/AboutPage";
 
 
 
 function App() {
-  const dispatch = useDispatch();
-
   const pageState = useSelector(state => state.pages);
   const nav = pageState.nav;
-
-  const changePage = (page) => {
-    dispatch(setPage(page));
-
-    setTimeout(() => {
-        dispatch(resetPage())
-    }, 1000);
-  };
 
   return (
     <div className="App">
@@ -36,7 +27,7 @@ function App() {
         <div className={`ashleigh-card ${nav}`}>
           <img src={titleCardRectangleText} alt="0" className="title-card-text" />
           <img src={titleCardRectangle} alt="0" className="core" />
-          <UnderlineGenerator underline="titleRectangle" onClickPage="home" />
+          <UnderlineGenerator underline="titleRectangle" onClickPage={nav === "home" ? "about" : "home"} />
         </div>
       </div>
       <div className="image-layer">
@@ -47,6 +38,7 @@ function App() {
         </div>
       </div>
       <HomePage />
+      <AboutPage />
       <ProjectList />
       <ProjectPage />
       <div className={`black-layer`}>

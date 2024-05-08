@@ -119,7 +119,6 @@ function ProjectPage() {
                         src={num8} alt="0" onClick={() => dispatch(setProject(14))}
                         className={`index-number eight ${visibility} ${activeProject === 14 ? "highlighted" : ""}`} />
                 </div>
-
             </div>
         </>
     )

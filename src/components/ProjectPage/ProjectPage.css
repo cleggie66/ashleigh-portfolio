@@ -1,4 +1,5 @@
 .pdf-page {
+    pointer-events: none;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -52,6 +53,7 @@
 }
 
 .nav-arrow {
+    pointer-events: all;
     font-size: 48px;
     margin: 30px;
     color: rgba(9, 5, 5, 0.454);
@@ -87,6 +89,7 @@
 }
 
 .index-number {
+    pointer-events: all;
     width: 6%;
 }
 

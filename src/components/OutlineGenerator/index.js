@@ -81,6 +81,8 @@ function OutlineGenerator(props) {
     const intervalTime = 20;
     const frameCount = 14;
     const item = props.outline;
+    const disabled = props.disabled;
+
 
     const _intervalRef = useRef(null);
     const [startCounter, setStartCounter] = useState(false);
@@ -138,6 +140,7 @@ function OutlineGenerator(props) {
                 )
             }
             <div
+                // style={{ display: disabled ? 'none' : "none" }}
                 className="hit-box"
                 onMouseOver={() => {
                     setStartCounter(true)

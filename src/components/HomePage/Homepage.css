@@ -47,7 +47,6 @@ div:has(.hit-box:hover)>div.slide-left>h4 {
     font-weight: 400;
 }
 
-
 div:has(.hit-box:hover)>div.slide-right>p {
     animation: .8s slide-right;
 }
@@ -107,8 +106,13 @@ div:has(.hit-box:hover)>div.slide-left>p {
     width: 50%;
 }
 
-.poloroid.pre,
-.poloroid.post {
+.poloroid.about {
+    margin-left: calc(4.5 * var(--mscale));
+    margin-bottom: calc(1.2 * var(--mscale));
+}
+
+.poloroid.index,
+.poloroid.projects {
     margin-right: calc(8 * var(--mscale));
 }
 

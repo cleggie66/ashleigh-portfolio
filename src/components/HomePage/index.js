@@ -31,6 +31,7 @@ import "./Homepage.css";
 function HomePage() {
     const pageState = useSelector(state => state.pages);
     const visibility = pageState.home;
+    const nav = pageState.nav;
 
     const homePageItems = [
         {
@@ -49,14 +50,6 @@ function HomePage() {
             textAnimation: "slide-right",
             title: "Have Some Fun",
             description: "Spontaneity is essential in the pursuit of life!"
-        },
-        {
-            name: "poloroid",
-            src: poloroid,
-            zoom: "zoom",
-            textAnimation: "slide-right",
-            title: "Hey!",
-            description: "I’m Ashleigh Cleghorn, welcome to my design portfolio. A portfolio usually showcases the projects or work of a designer. I believe that a portfolio should also showcase the person behind that work - interests, experiences, skills, and personality all combine to create a one-of-a-kind designer."
         },
         {
             name: "sketch-1",
@@ -176,17 +169,27 @@ function HomePage() {
 
     return (
         <>
+            <div className="image-layer zoom">
+                <div className={`poloroid ${nav}`}>
+                    <div className={`item-text-box slide-right`}>
+                        <h4>"Hey!"</h4>
+                        <p>"I’m Ashleigh Cleghorn, welcome to my design portfolio. A portfolio usually showcases the projects or work of a designer. I believe that a portfolio should also showcase the person behind that work - interests, experiences, skills, and personality all combine to create a one-of-a-kind designer."</p>
+                    </div>
+                    <img src={poloroid} alt="0" className="core" />
+                    <OutlineGenerator outline="poloroid" />
+                </div>
+            </div>
             {
                 homePageItems.map((item) => {
                     return (
                         <div className={`image-layer ${item.zoom} ${item.outline}`}>
-                            <div className={`${item.name} ${visibility}`}>
+                            <div className={`${item.name} ${visibility} ${nav}`}>
                                 <div className={`item-text-box ${item.textAnimation}`}>
                                     <h4>{item.title}</h4>
                                     <p>{item.description}</p>
                                 </div>
                                 <img src={item.src} alt="0" className="core" />
-                                <OutlineGenerator outline={item.name} />
+                                <OutlineGenerator outline={item.name} disabled={true}/>
                             </div>
                         </div>
                     )
